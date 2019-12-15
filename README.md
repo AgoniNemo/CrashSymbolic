@@ -8,5 +8,6 @@ sh CrashSymbolic.sh绝对路径
 
 命令完成后会生成一个result.crash文件，这个就是已经去符号的crash文件
 ```
+#### 如下图
 
 ![1](https://github.com/AgoniNemo/CrashSymbolic/blob/master/1.png)
