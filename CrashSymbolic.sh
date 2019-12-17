@@ -29,20 +29,20 @@ then
     echo "已传入crash文件路径 $crashPath"
 else
     findFile
-    echo "未传入crash文件路径,搜索同级目录下crash文件"
+    echo "未传入crash文件路径,搜索同级目录下crash文件 $crashPath"
 fi
 
 if [ ! -f "$crashPath" ]
 then
-    echo "搜索失败，无法找到crash文件"
+    echo "搜索失败，无法找到crash文件,路径为:$crashPath"
     exit
 fi
 
-dSYMPath=$(find . -name "*.dSYM" -print|grep 'dSYM')
+dSYMPath=$(find . -name "*.dSYM")
 
-if [ ! -f "$dSYMPath" ]
+if [ ! -d "$dSYMPath" ]
 then
-    echo "无法找到dSYM文件"
+    echo "无法找到dSYM文件,路径为：$dSYMPath"
     exit
 fi
 
